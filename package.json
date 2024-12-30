@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "homepage": "https://torodriguezt.github.io/PairedBayes-Docs/",
+  "homepage": "https://torodriguezt.github.io/PairedBayes-Docs",
   "dependencies": {
     "next": "^15.1.3",
     "react": "^19.0.0",
