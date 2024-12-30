@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - main # Cambia "main" si usas otra rama principal
+      - main
 
 jobs:
   build-and-deploy:
@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18 # Cambiar a Node.js 18 para compatibilidad con structuredClone
 
       # Install dependencies
       - name: Install dependencies
@@ -32,5 +32,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages # Rama donde se desplegará la app
-          folder: dist # Carpeta generada por Vite al construir el proyecto
+          branch: gh-pages
+          folder: dist
