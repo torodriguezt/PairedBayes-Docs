@@ -1,0 +1,167 @@
+/* Variables de color */
+:root {
+    --primary-color: #2d2d2d;
+    --secondary-color: #4a90e2;
+    --background-color: #ffffff; /* Fondo principal blanco */
+    --code-background: #f9f9f9; /* Fondo de bloques de código más claro */
+}
+
+/* Reset CSS básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos base del body */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--primary-color);
+    background: linear-gradient(to bottom, #f9f9f9, #ffffff); /* Fondo con degradado */
+    display: flex;
+}
+
+/* Menú de navegación */
+nav {
+    width: 250px;
+    height: 100vh;
+    padding: 2rem;
+    background-color: var(--code-background); /* Color de fondo del menú */
+    border-right: 2px solid #ddd; /* Borde derecho */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra */
+    position: fixed; /* Fija el menú en su posición */
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Permite scroll si el contenido excede la altura */
+    z-index: 10; /* Se asegura de estar por encima del contenido */
+}
+
+/* Enlaces del menú */
+.nav-link {
+    display: block;
+    padding: 1rem 0; /* Más espacio vertical */
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+    padding-left: 10px; /* Efecto más visible */
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: var(--secondary-color); /* Indicador de sección activa */
+}
+
+/* Contenido principal */
+.content {
+    margin-left: 250px; /* Deja espacio suficiente para el menú */
+    padding: 2rem;
+    flex-grow: 1;
+    background-color: var(--background-color); /* Fondo blanco */
+}
+
+/* Títulos principales */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem; /* Más grande */
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-transform: uppercase; /* Mayúsculas para destacar */
+    margin-bottom: 2rem; /* Más espacio */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Títulos secundarios */
+h2 {
+    font-family: 'Lora', serif; /* Cambia la fuente */
+    font-size: 2rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin-top: 0.5rem;
+    border-radius: 5px;
+}
+
+/* Botón de alternar */
+.toggle-button {
+    display: inline-block;
+    background-color: var(--secondary-color); /* Color de fondo */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Bordes más redondeados */
+    padding: 12px 24px; /* Espaciado más amplio */
+    cursor: pointer; /* Muestra el puntero de clic */
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más visible */
+}
+
+.toggle-button:hover {
+    background-color: #357ABD; /* Color más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Secciones */
+.section {
+    margin-bottom: 4rem; /* Más espacio entre secciones */
+    padding: 2rem; /* Espaciado interno */
+    border: 1px solid #eee; /* Bordes más claros */
+    border-radius: 12px; /* Bordes más suaves */
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05); /* Sombra más sutil */
+    position: relative;
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 5px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+/* Bloques de código */
+pre {
+    background-color: #f7f7f7; /* Fondo más claro */
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-family: 'Fira Code', monospace; /* Fuente especial para código */
+    color: #333;
+    border: 1px solid #ddd; /* Contorno ligero */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        box-shadow: none;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+}

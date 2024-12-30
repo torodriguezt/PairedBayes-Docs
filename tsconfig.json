@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                                  // Establece la versión de JavaScript a emitir
+    "module": "ESNext",                               // Usa ESNext para soportar importaciones modernas
+    "jsx": "react-jsx",                               // Usa React 17+ y JSX moderno
+    "moduleResolution": "node",                      // Usa la resolución de módulos de Node.js
+    "strict": true,                                  // Habilita todas las comprobaciones estrictas de TypeScript
+    "esModuleInterop": true,                         // Interoperabilidad con módulos CommonJS
+    "skipLibCheck": true,                            // Omite la revisión de archivos .d.ts
+    "baseUrl": "./",                                 // Establece la raíz para las rutas relativas
+    "paths": {                                       // Configura alias para rutas
+      "@components/*": ["src/components/*"],
+      "@styles/*": ["src/styles/*"]
+    },
+    "forceConsistentCasingInFileNames": true         // Asegura el uso consistente de mayúsculas y minúsculas en nombres de archivo
+  },
+  "include": ["src/**/*"],                           // Incluye todos los archivos en la carpeta src
+  "exclude": ["node_modules"]                        // Excluye node_modules para mejorar el rendimiento
+}
